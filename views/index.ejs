@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.css' />
+    <style type="text/css">
+          body{
+              padding-top:60px;
+              padding-bottom:40px;
+          }
+    </style>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script src="/javascripts/jquery.min.js"></script>
+  </head>
+  <body>
+  <%- include navbar.ejs %>
+
+  <div id="container" class="container">
+      <div class="hero-unit">
+          <h1>欢迎来到MyBlog</h1>
+          <p>MyBog是一个基于Node.js的微博系统。</p>
+      </div>
+      <div class="row">
+          <div class="span4">
+              <h2>Jack 说</h2>
+              <p>Node.js 2014 这一年, 发生了太多太多事呀</p>
+          </div>
+          <div class="span4">
+              <h2>Micral 说</h2>
+              <p>io.js项目成立了，node.js部分核心成员因不满而成立了另一个项目。</p>
+          </div>
+          <div class="span4"><br/>
+              <p><a href="/user/more" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+          </div>
+      </div>
+      <hr/>
+      <%- include footer.ejs %>
+  </div>
+
+  </body>
+</html>

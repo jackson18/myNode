@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.css' />
+    <style type="text/css">
+          body{
+              padding-top:60px;
+              padding-bottom:40px;
+          }
+    </style>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script src="/javascripts/jquery.min.js"></script>
+  </head>
+  <body>
+  <%- include ../navbar.ejs %>
+
+  <div id="container" class="container">
+      <div class="hero-unit">
+          <form action="/user/input" method="post" class="form-horizontal">
+              <input type="hidden"  name="blog[username]" value="<%-username%>"/><br/>
+              <div class="control-group">
+                  <input name="blog[content]" class="span4" type="text">
+                  <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+          </form>
+      </div>
+      <div class="row">
+          <% data.forEach(function(b){ %>
+                  <div class="span4">
+                      <h2><%=b.username%> 说</h2>
+                      <p><%=b.content%></p>
+                  </div>
+          <% })%>
+      </div>
+      <hr/>
+      <%- include ../footer.ejs %>
+  </div>
+
+  </body>
+</html>

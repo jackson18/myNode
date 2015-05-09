@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+      <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+      <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.css' />
+      <style type="text/css">
+          body{
+              padding-top:60px;
+              padding-bottom:40px;
+          }
+      </style>
+      <script src="/javascripts/bootstrap.js"></script>
+      <script src="/javascripts/jquery.min.js"></script>
+  </head>
+  <body>
+  <%- include navbar.ejs %>
+
+   <div id="container" class="container">
+       <form method="post" class="form-horizontal">
+           <div class="control-group">
+               <label class="control-label">用户名</label>
+               <div class="controls">
+                   <input type="text" name="name" placeholder="username">
+               </div>
+           </div>
+           <div class="control-group">
+               <label class="control-label">密&nbsp;&nbsp;码</label>
+               <div class="controls">
+                   <input type="password" name="password" placeholder="Password">
+               </div>
+           </div>
+           <div class="control-group">
+               <div class="controls">
+                   <button type="submit" class="btn">Sign in</button>
+               </div>
+           </div>
+       </form>
+
+       <hr/>
+       <%- include footer.ejs %>
+   </div>
+</body>
+</html>
